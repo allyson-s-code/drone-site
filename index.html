@@ -1,60 +1,107 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <header>
-            <h4><span class="logo-blue">Drone</span>.Series<h4>
-            <img src="assets/menu.svg" class="menu-btn" />
-        </header>
-        <main>
-            <section class="hero">
-                <h1>Drone racing gone wild</h1>
-                <p>Register now for the ultimate drone racing event. 5 mile courses and over $10 million in prize money!</p>
-                <img src="assets/drone.png" alt="drone">
-                <img src="assets/blur.png" alt="">
-            </section>
-            <div class="testimonial">
-                <q>“The stadium is simply unreal. Scrimba hall will make this the best drone racing event ever, period.”</q>
-                <p>anonymous guy</p>
-            </div>
-            <section class="thumbnails">
-                <h2>Last Year's Footage</h2>
-                <p>With over 5,000 participants, 2020 featured some of the most amazing drone races from the most competitive field ever seen.</p>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h4 class="logo"><span class="logo-blue">Drone</span>.Series</h4>
+      <img src="assets/menu.svg" class="menu-btn" />
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Drone racing gone wild</h1>
+        <p>
+          Register now for the ultimate drone racing event. 5 mile courses and
+          over $10 million in prize money!
+        </p>
+        <div class="drone-wrapper">
+          <img src="assets/drone.png" alt="drone" class="hero-drone" />
+          <img src="assets/blur.png" alt="" class="drone-blur" />
+        </div>
+      </section>
+      <div class="testimonial">
+        <q
+          >The stadium is simply unreal. Scrimba hall will make this the best
+          drone racing event ever, period.</q
+        >
+        <p>anonymous guy</p>
+      </div>
+      <section class="thumbnail-section">
+        <h2>Last Year's Footage</h2>
+        <p>
+          With over 5,000 participants, 2020 featured some of the most amazing
+          drone races from the most competitive field ever seen.
+        </p>
 
-                <p>In 2021, we’re about to double the excitement with 10,000 race participants and 100,000 fans!
-                </p>
+        <p>
+          In 2021, we’re about to double the excitement with 10,000 race
+          participants and 100,000 fans!
+        </p>
 
-                <div class="thumbnails">
-                    <img class="img-1" src="assets/footage-4.jpg" alt="hands on remote drone controls">
-                    <img class="img-2" src="assets/footage-2.jpg" alt="drone flying">
-                    <img class="img-3" src="assets/footage-5.jpg" alt="drone flying with mountains in background">
-                    <img class="img-4" src="assets/footage-3.jpg" alt="arial trees and curvy road">
-                    <img class="img-5" src="assets/footage-1.jpg" alt="computer and drone parts laid out in a grid">
-                </div>
+        <div class="thumbnails">
+          <div class="thumbnail thumbnail-1">
+            <img
+              class="img-1"
+              src="assets/footage-4.jpg"
+              alt="hands on remote drone controls"
+            />
+          </div>
+          <div class="thumbnail thumbnail-2">
+            <img class="img-2" src="assets/footage-2.jpg" alt="drone flying" />
+          </div>
+          <div class="thumbnail thumbnail-3">
+            <img
+              class="img-3"
+              src="assets/footage-5.jpg"
+              alt="drone flying with mountains in background"
+            />
+          </div>
+          <div class="thumbnail thumbnail-4">
+            <img
+              class="img-4"
+              src="assets/footage-3.jpg"
+              alt="arial trees and curvy road"
+            />
+          </div>
+          <div class="thumbnail thumbnail-5">
+            <img
+              class="img-5"
+              src="assets/footage-1.jpg"
+              alt="computer and drone parts laid out in a grid"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h3>Register For The Event</h3>
+      <div class="form-email--container">
+        <form action="submit">
+          <label class="name-lbl" for="name">Name</label>
+          <input id="name" class="name-input" type="text" />
 
-            </section>
-        </main>
-        <footer>
-            <h3>Register For The Event</h3>
-            <div class="form-email--container">
-                <form action="submit">
-                    <label class="name-lbl" for="name">Name</label>
-                    <input id="name" class="name-input" type="text" />
+          <label class="email-lbl" for="email">Email</label>
+          <input class="email-input" type="email" />
 
-                    <label class="email-lbl" for="email">Email</label>
-                    <input class="email-input" type="email" />
+          <button>Register Now!</button>
+        </form>
+        <div class="contact-container">
+          <p class="contact-phone">1-555-555-3298</p>
+          <p class="contact-email">some@email.com</p>
+        </div>
+      </div>
+    </footer>
 
-                    <button>Register Now!</button>
-                </form>
-                <div class="contact-container">
-                    <p class="contact-phone">1-555-555-3298</p>
-                    <p class="contact-email">some@email.com</p>
-                </div>
-            </div>   
-        </footer>
-        
-        
-        <script src="index.js"></script>
-    </body>
+    <script src="index.js"></script>
+  </body>
 </html>
