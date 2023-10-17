@@ -8,19 +8,33 @@
   --accent-green: #b2dd9e;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1,
 h2,
 h3,
 h4,
-q,
+blockquote,
 .testimonial p,
 footer label,
-footer button {
+footer button,
+.nav-menu {
   font-family: "Bebas Neue", sans-serif;
   margin: 0;
 }
@@ -38,20 +52,57 @@ header {
 }
 
 .logo {
-  font-size: 1.6875rem;
+  font-size: 1.625rem;
   color: white;
   background: black;
-  padding: 0.4em 0.6em;
+  line-height: 24px;
+  padding: 0.5em;
 }
 
 .logo-blue {
   color: #6889ff;
 }
 
+.menu-btn {
+  cursor: pointer;
+  width: 2.5em;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 66%;
+  background-color: #363b4e;
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+
+.nav-item a {
+  color: white;
+  display: block;
+  padding: 0.4em 1.5em;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.exit-btn {
+  text-align: right;
+}
+
+.exit-btn img {
+  width: 2em;
+  margin: 2em;
+  cursor: pointer;
+}
+
 main {
   position: relative;
-  margin-left: 3.75em;
+  width: 90%;
   display: flex;
+  align-self: flex-end;
   flex-direction: column;
   background-color: #7988be;
 }
@@ -69,6 +120,11 @@ main {
   background-color: var(--accent-green);
   background-position: 50% 55%;
   background-blend-mode: screen;
+}
+
+.hero-text {
+  width: 75%;
+  min-width: 200px;
 }
 
 .hero h1 {
@@ -106,7 +162,8 @@ main {
 .testimonial {
   position: relative;
   background-color: #303853;
-  padding: 3.8rem 2.5rem 23rem 2.5rem;
+  padding: 4em 2em;
+  height: 75vh;
   color: white;
 }
 
@@ -123,7 +180,7 @@ main {
   background-position: 8% 55%;
 }
 
-.testimonial q {
+.testimonial blockquote {
   position: relative;
   font-size: 1.5rem;
 }
@@ -132,16 +189,16 @@ main {
   position: relative;
   font-size: 1.125rem;
   margin-top: 4em;
-  margin-left: 2.5em;
+  padding-left: 1.5em;
 }
 
 .testimonial p:before {
   position: absolute;
   content: "";
-  width: 1.75em;
+  width: 1em;
   border-top: 1px solid white;
-  left: -2.5em;
-  top: 0.5em;
+  left: 0;
+  top: 50%;
 }
 
 .thumbnail-section {
@@ -149,16 +206,18 @@ main {
   padding: 3em 0 2.2em 0;
 }
 
+.thumbnail-text {
+  padding-right: 2em;
+}
+
 .thumbnail-section h2 {
   font-size: 2.25rem;
-  margin-right: 2em;
 }
 
 .thumbnail-section p {
   font-size: 1.125rem;
   margin: 1.5em 0;
   line-height: 1.4;
-  margin-right: 2em;
 }
 
 .thumbnails {
@@ -199,37 +258,45 @@ main {
 }
 
 footer {
+  width: 100%;
   background-color: #b2dd9e;
-  padding: 0 2.69em 3.31em 3.94em;
+  padding-bottom: 2em;
 }
 
 footer h3 {
   display: inline-block;
   font-size: 2.25rem;
   background-color: #9fc88c;
-  padding: 1.8125rem 2rem 1.5rem 3.94rem;
-  margin-left: -3.94rem;
+  padding: 1em 1em 1em 10%;
+}
+
+.form-email--container {
+  width: 90%;
+  margin: 2em 2em 2em 10%;
 }
 
 form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 2em 0 0 0;
+
+  padding-right: 2em;
+  padding-bottom: 2em;
 }
 
 form label {
   font-size: 1.5rem;
 }
 
-form label:nth-child(3) {
+.email-lbl {
   margin-top: 1.25em;
 }
 
 form input {
   border: none;
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
   font-size: 1.125rem;
-  padding: 1em 0.5em;
+  padding: 1rem 0.5rem;
 }
 
 form button {
@@ -238,13 +305,13 @@ form button {
   cursor: pointer;
   background-color: black;
   color: white;
-  padding: 0.5em 0;
+  padding: 0.6em 0;
   margin-top: 1.5em;
 }
 
 .contact-container {
   font-size: 1.125rem;
-  margin-top: 3.8125rem;
+  margin-top: 2em;
 }
 
 .contact-email {
@@ -270,4 +337,186 @@ form button {
   border-top: 1px solid black;
   position: absolute;
   top: 33px;
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  .hero h1,
+  .thumbnail-section h2 {
+    font-size: 4.85rem;
+    line-height: 0.916;
+  }
+
+  header {
+    padding: 0 12.5%;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    padding: 0.5em 0.7em;
+  }
+
+  /* nav */
+  .menu-btn {
+    display: none;
+  }
+
+  .exit-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    margin: 0;
+    transform: translateX(0);
+    background: none;
+    position: unset;
+    height: auto;
+    width: 55%;
+  }
+
+  .nav-menu ul {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    padding: 0 0 0 2em;
+  }
+
+  /* hero */
+  .hero {
+    width: 57%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .hero-text {
+    width: 62%;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: -17%;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-top: 1.4em;
+  }
+
+  .drone-wrapper {
+    width: 73%;
+    min-width: 400px;
+    position: absolute;
+    left: 69%;
+    top: 12.5em;
+    margin-top: 0;
+  }
+
+  /* quote */
+  .testimonial {
+    padding: 15em 13.6em 15em 11.75em;
+  }
+
+  .testimonial blockquote {
+    font-size: 2.7rem;
+    line-height: 99.6%;
+  }
+
+  .testimonial p {
+    font-size: 1.8rem;
+    margin-top: 1.67em;
+  }
+
+  /* thumbnails */
+  .thumbnail-section {
+    position: relative;
+    padding: 7em 0;
+  }
+
+  .thumbnail-text {
+    width: 35%;
+    margin-left: -10%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .thumbnail-text p {
+    font-size: 1.2rem;
+  }
+
+  .thumbnails {
+    width: 65%;
+    position: absolute;
+    top: -125px;
+    right: 0;
+    margin: 0;
+  }
+
+  /* footer*/
+  footer {
+    padding: 0 0 5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer h3 {
+    font-size: 3.2rem;
+    align-self: flex-start;
+    padding: 0.5em 0.5em 0.5em 12%;
+  }
+
+  .form-email--container {
+    width: 76%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  form {
+    margin: 0;
+    width: 55%;
+  }
+
+  .name-lbl,
+  .email-lbl {
+    font-size: 1.6rem;
+    margin-top: 1.625em;
+  }
+
+  form button {
+    font-size: 1.75rem;
+    padding: 0.9em 0;
+  }
+
+  .contact-container {
+    width: 35%;
+  }
+
+  .contact-phone,
+  .contact-email,
+  .contact-email:before,
+  .contact-email:after {
+    width: 100%;
+  }
 }

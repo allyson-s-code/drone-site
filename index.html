@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -16,37 +17,52 @@
     <header>
       <h4 class="logo"><span class="logo-blue">Drone</span>.Series</h4>
       <img src="assets/menu.svg" class="menu-btn" />
+      <nav class="nav-menu">
+        <ul>
+          <li class="exit-btn"><img src="assets/exit.svg" /></li>
+          <li class="nav-item"><a href="#hero">Home</a></li>
+          <li class="nav-item"><a href="#">Races</a></li>
+          <li class="nav-item"><a href="#footer">Register</a></li>
+          <li class="nav-item"><a href="#">Faq</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section class="hero">
-        <h1>Drone racing gone wild</h1>
-        <p>
-          Register now for the ultimate drone racing event. 5 mile courses and
-          over $10 million in prize money!
-        </p>
+      <section class="hero" id="hero">
+        <div class="hero-text">
+          <h1>Drone racing gone wild</h1>
+          <p>
+            Register now for the ultimate drone racing event. 5 mile courses and
+            over $10 million in prize money!
+          </p>
+        </div>
+
         <div class="drone-wrapper">
           <img src="assets/drone.png" alt="drone" class="hero-drone" />
           <img src="assets/blur.png" alt="" class="drone-blur" />
         </div>
       </section>
       <div class="testimonial">
-        <q
-          >The stadium is simply unreal. Scrimba hall will make this the best
-          drone racing event ever, period.</q
-        >
+        <blockquote>
+          "The stadium is simply unreal. Scrimba hall will make this the best
+          drone racing event ever, period."
+        </blockquote>
         <p>anonymous guy</p>
       </div>
       <section class="thumbnail-section">
-        <h2>Last Year's Footage</h2>
-        <p>
-          With over 5,000 participants, 2020 featured some of the most amazing
-          drone races from the most competitive field ever seen.
-        </p>
+        <div class="thumbnail-text">
+          <h2>Last Year's Footage</h2>
+          <p>
+            With over 5,000 participants, 2020 featured some of the most amazing
+            drone races from the most competitive field ever seen.
+          </p>
 
-        <p>
-          In 2021, we’re about to double the excitement with 10,000 race
-          participants and 100,000 fans!
-        </p>
+          <p>
+            In 2021, we’re about to double the excitement with 10,000 race
+            participants and 100,000 fans!
+          </p>
+        </div>
 
         <div class="thumbnails">
           <div class="thumbnail thumbnail-1">
@@ -83,8 +99,8 @@
         </div>
       </section>
     </main>
-    <footer>
-      <h3>Register For The Event</h3>
+    <footer id="contact">
+      <h3>Register For The Event!</h3>
       <div class="form-email--container">
         <form action="submit">
           <label class="name-lbl" for="name">Name</label>
